@@ -9,7 +9,8 @@ This repository contains the code and documentation for classifying different st
   - `Moderate Demented`
   - `Non Demented`
   - `Very Mild Demented`
-  
+link to data set used: https://www.kaggle.com/datasets/tourist55/alzheimers-dataset-4-class-of-images
+
 - **Models Implemented**:
   - **CNN**: A basic convolutional neural network (accuracy: 66-68%).
   - **Inception v3**: Pre-trained model, underperformed (accuracy: 60-62%).
@@ -60,33 +61,28 @@ This repository contains the code and documentation for classifying different st
       |-- VeryMildDemented/
     ```
 6. Then use the preprocessing file to create the training and validation sets.
+   There are some diffrent preprocesses based on which model that you want to train.
+   But if you want to only train without augmentations you can make a script that just splits the
+   data set in to traing and validation without augmentation. 
 
 ## Usage
 
 1. **Training Models**:
-   - To train individual models (e.g., DenseNet-121 or ResNet), use the respective script:
-     ```bash
-     python train_densenet.py  # To train DenseNet
-     python train_resnet.py    # To train ResNet
-     ```
+   - To train individual models (e.g., DenseNet-121 or ResNet), we use ipynb scripts,
+     that both trains and analyses / gives matraixes of the diffrent results of the training and validation.
+     
 
 2. **Data Augmentation**:
-   - Augmentations like rescale, rotation, zoom, and brightness adjustments are applied in the `augmentation.py` file:
-     ```bash
-     python augmentation.py
-     ```
+   - Augmentations like rescale, rotation, zoom, and brightness adjustments are applied in the `augmentation.ipynb` file.
+     
 
 3. **Handling Class Imbalance**:
-   - SMOTE oversampling and class weighting are handled in `imbalance.py`:
-     ```bash
-     python imbalance.py
-     ```
+   - SMOTE oversampling and class weighting are handled in `imbalance.ipynb`.
+    
 
 4. **Voting System**:
-   - Combine the DenseNet and ResNet models using the ensemble voting system:
-     ```bash
-     python voting_system.py
-     ```
+   - Combine the DenseNet and ResNet models using the ensemble voting system is done in `voting.ipynb`.
+     
 
 ## Model Performance
 
@@ -98,17 +94,7 @@ This repository contains the code and documentation for classifying different st
 | ResNet                           | 88%       |
 | **Voting (DenseNet + ResNet)**   | **98.9%** |
 
-## Contributing
 
-We welcome contributions! If you have suggestions or improvements, please fork the repository and submit a pull request. Ensure your code follows the project guidelines.
 
-### Steps to Contribute:
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-branch`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature-branch`)
-5. Open a pull request
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+# Conclusion
+The project successfully classified Alzheimer's stages using MRI scans, achieving a final accuracy of 98.9% using DenseNet and ResNet models in a voting system.
