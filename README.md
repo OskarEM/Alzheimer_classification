@@ -35,8 +35,8 @@ link to data set used: https://www.kaggle.com/datasets/tourist55/alzheimers-data
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/Alzheimer-MRI-Classification.git
-    cd Alzheimer-MRI-Classification
+    git clone https://github.com/OskarEM/Alzheimer_classification.git
+    cd Alzheimer_classification
     ```
 
 2. Create and activate a virtual environment (optional but recommended):
@@ -46,8 +46,8 @@ link to data set used: https://www.kaggle.com/datasets/tourist55/alzheimers-data
     ```
 
 3. Install required dependencies:
-   There are no Requirment files as each file is based on diffrent models,
-   so each need be downloaded acording to use.
+   There are no requirment files as each file is based on diffrent models,
+   so each is needed to be downloaded according to use.
     ```bash
     pip install
     ```
@@ -63,7 +63,7 @@ link to data set used: https://www.kaggle.com/datasets/tourist55/alzheimers-data
 6. Then use the preprocessing file to create the training and validation sets.
    There are some diffrent preprocesses based on which model that you want to train.
    But if you want to only train without augmentations you can make a script that just splits the
-   data set in to traing and validation without augmentation. 
+   data set in too training and validation without augmentation. 
 
 ## Usage
 
@@ -96,5 +96,3 @@ link to data set used: https://www.kaggle.com/datasets/tourist55/alzheimers-data
 
 
 
-# Conclusion
-The project successfully classified Alzheimer's stages using MRI scans, achieving a final accuracy of 98.9% using DenseNet and ResNet models in a voting system.
