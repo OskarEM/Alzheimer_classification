@@ -45,11 +45,13 @@ This repository contains the code and documentation for classifying different st
     ```
 
 3. Install required dependencies:
+   There are no Requirment files as each file is based on diffrent models,
+   so each need be downloaded acording to use.
     ```bash
-    pip install -r requirements.txt
+    pip install
     ```
 
-4. Download the Alzheimer's MRI dataset and place it in the `data/` directory:
+5. Download the Alzheimer's MRI dataset and place it in a dictonary, example the `data/` directory:
     ```
     data/
       |-- MildDemented/
@@ -57,6 +59,7 @@ This repository contains the code and documentation for classifying different st
       |-- NonDemented/
       |-- VeryMildDemented/
     ```
+6. Then use the preprocessing file to create the training and validation sets.
 
 ## Usage
 
